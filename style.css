@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Scope+One&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:900&subset=latin-ext');
+
+body {
+	font-family: 'Scope One', serif;
+	margin: 0;
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	margin: 0 0 40px;
+	color: #1B4965;
+}
+
+p {
+	margin: 0;
+	line-height: 1.5;
+}
+
+a {
+	color: #1B4965;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-rows: 80px auto 80px;
+	height: 100vh;
+}
+
+.wrapper.first {
+	grid-template-columns: 96px 1fr 96px 2fr 96px 1fr 96px;
+}
+
+.wrapper.second {
+	grid-template-columns: 96px 2fr 96px 1fr 96px 1fr 96px;
+}
+
+.left, .right {
+	grid-row: 2;
+	display: grid;
+	font-size: 24px;
+	align-items: center;
+}
+
+.right {
+	grid-column: 6;
+	position: relative;
+}
+
+.right > svg {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	font-size: 64px;
+	color: #1B4965;
+}
+
+.photo {
+	grid-row: 1/4;
+	grid-column: 4;
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: opacity(80%);
+}
+
+.wrapper.first .left {
+	grid-column: 2;
+	font-family: 'Roboto', sans-serif;
+	font-size: 64px;
+	color: #1B4965;
+}
+
+.wrapper.second .left {
+	grid-column: 4;
+	align-content: start;
+}
+
+.wrapper.second .photo {
+	grid-column: 2/3;
+}
+
+.wrapper.second .right {
+	align-content: center;
+}
+
+.wrapper.second p {
+	font-size: 16px;
+}
+
+.wrapper.second .right p {
+	display: block;
+	margin-bottom: 40px;
+}
+
+.wrapper.second .right * {
+	font-size: 24px;
+}
+
+.vert {
+	grid-row: 1/4;
+	grid-column: 1;
+	background-color: #1B4965;
+}
+
+nav {
+	grid-row: 2/3;
+	grid-column: 1;
+	margin: auto;
+}
+
+nav a {
+	display: block;
+	height: 80px;
+	width: 96px;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+}
+
+nav a:hover {
+	background-color: #122F41;
+}
+
+nav a * {
+	color: #fff;
+}
+
+nav a img {
+	height: 24px;
+	transform: translateY(-10px) scale(4);
+}
+
+nav a > div {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+nav a div > * {
+	display: block;
+	margin: 0 auto;
+}
+
+nav a svg {
+	font-size: 24px !important;
+}
+
+nav a > span {
+	font-size: 16px;
+}
